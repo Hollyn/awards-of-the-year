@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'PagesController@index');
+Route::match(['get', 'post'], '/login', 'AuthController@login');
+Route::match(['get', 'post'], '/register', 'AuthController@register');

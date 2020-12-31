@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 
 Route::get('/', 'PagesController@index');
+Route::match(['get', 'post'], '/category', 'PagesController@category');
+Route::match(['get', 'post'], '/candidate', 'PagesController@candidate');

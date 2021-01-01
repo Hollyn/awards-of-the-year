@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'PagesController@index');
+Route::match(['get', 'post'], '/', 'PagesController@index');
 Route::match(['get', 'post'], '/login', 'AuthController@login');
 Route::match(['get', 'post'], '/register', 'AuthController@register');
